@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Grupos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 d-flex align-items-stretch grid-margin">
+                <div class="row flex-grow">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Grupos</h4>
+                                <div class="card">
+                                    <div class="card-body">
+                                        @using (Html.BeginForm("CreateGroup", "Groups", FormMethod.Post))
+                                        {
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Nombre del grupo</label>
+                                                        <input type="text" class="form-control" id="nombreGrupo" placeholder="Grupo" value="" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2"></div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <br>
+                                                        <button type="submit" class="btn btn-success mr-2">Guardar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

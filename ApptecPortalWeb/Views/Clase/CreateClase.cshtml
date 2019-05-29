@@ -1,0 +1,150 @@
+﻿@{
+    ViewBag.Title = "Clases";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 d-flex align-items-stretch grid-margin">
+                <div class="row flex-grow">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Horario de clases</h4>
+                                <div class="card">
+                                    <div class="card-body">
+                                        @using (Html.BeginForm("CreateClase", "Clase", FormMethod.Post))
+                                        {
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Dia</label>
+                                                        <select class="form-control" id="diaClases" required>
+                                                            <option selected>Seleccionar</option>
+                                                            <option>Lunes</option>
+                                                            <option>Martes</option>
+                                                            <option>Miercoles</option>
+                                                            <option>Jueves</option>
+                                                            <option>Viernes</option>
+                                                            <option>Sabado</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Hora inicio</label>
+                                                        <input type="time" class="form-control" id="horaInClases" value="" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Hora fin</label>
+                                                        <input type="time" class="form-control" id="horaFinClases" value="" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Aula</label>
+                                                        <select class="form-control" id="aulaId" required>
+                                                            <option selected>Seleccionar</option>
+                                                            <option></option>
+                                                            <option></option>
+                                                            <option></option>
+                                                            <option></option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Materia</label>
+                                                        <select class="form-control" id="materiaId" required>
+                                                            <option selected>Seleccionar</option>
+                                                            <option></option>
+                                                            <option></option>
+                                                            <option></option>
+                                                            <option></option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Grupo</label>
+                                                        <select class="form-control" id="grupoId" required>
+                                                            <option selected>Seleccionar</option>
+                                                            <option></option>
+                                                            <option></option>
+                                                            <option></option>
+                                                            <option></option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Profesor</label>
+                                                        <select class="form-control" id="profesorId" required>
+                                                            <option selected>Seleccionar</option>
+                                                            <option></option>
+                                                            <option></option>
+                                                            <option></option>
+                                                            <option></option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    <div class="row">
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-2">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button type="submit" class="btn btn-success mr-2">Guardar</button>
+                                        </div>
+                                    </div>
+                                        }
+                                    <hr>
+                                    <label for="">Horarios registrados</label>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <form class="forms-sample">
+                                                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Materia</th>
+                                                            <th>Alumno</th>
+                                                            <th>Profesor</th>
+                                                            <th>Hora inicio</th>
+                                                            <th>Hora fin</th>
+                                                            <th>Aula</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
